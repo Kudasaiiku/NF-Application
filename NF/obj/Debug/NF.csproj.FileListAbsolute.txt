@@ -1,0 +1,62 @@
+C:\Users\deadi\source\repos\NF\NF\bin\Debug\NF.exe.config
+C:\Users\deadi\source\repos\NF\NF\bin\Debug\NF.exe
+C:\Users\deadi\source\repos\NF\NF\bin\Debug\NF.pdb
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.csproj.AssemblyReference.cache
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.csproj.SuggestedBindingRedirects.cache
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\MainWindow.g.cs
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\App.g.cs
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF_MarkupCompile.cache
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF_MarkupCompile.lref
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\MainWindow.baml
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.g.resources
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.Properties.Resources.resources
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.csproj.GenerateResource.cache
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.csproj.CoreCompileInputs.cache
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.exe
+C:\Users\deadi\source\repos\NF\NF\obj\Debug\NF.pdb
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\NF.exe.config
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\NF.exe
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\NF.pdb
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.csproj.AssemblyReference.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.csproj.SuggestedBindingRedirects.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\MainWindow.g.cs
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\App.g.cs
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF_MarkupCompile.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF_MarkupCompile.lref
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\MainWindow.baml
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.g.resources
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.Properties.Resources.resources
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.csproj.GenerateResource.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.csproj.CoreCompileInputs.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.exe
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.pdb
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\EPPlus.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\EPPlus.xml
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\deadi\OneDrive\Рабочий стол\NF\NF\obj\Debug\NF.csproj.CopyComplete
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\NF.exe.config
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\NF.exe
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\NF.pdb
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\EPPlus.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\EPPlus.xml
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.csproj.AssemblyReference.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.csproj.SuggestedBindingRedirects.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\MainWindow.g.cs
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\App.g.cs
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF_MarkupCompile.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF_MarkupCompile.lref
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\MainWindow.baml
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.g.resources
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.Properties.Resources.resources
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.csproj.GenerateResource.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.csproj.CoreCompileInputs.cache
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.csproj.CopyComplete
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.exe
+C:\Users\deadi\OneDrive\Рабочий стол\NF — копия\NF\obj\Debug\NF.pdb

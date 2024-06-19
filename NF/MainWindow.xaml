@@ -1,0 +1,299 @@
+﻿<Window x:Class="NF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NF"
+        mc:Ignorable="d"
+        Title="Народный фронт v1.00" Height="1080" Width="1920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" AllowsTransparency="True">
+
+    <Window.Resources>
+        <Style x:Key="CustomWindowStyle" TargetType="Window">
+            <Setter Property="Background" Value="#FF3B3A46" />
+            <Setter Property="WindowChrome.WindowChrome">
+                <Setter.Value>
+                    <WindowChrome CaptionHeight="0" CornerRadius="15" GlassFrameThickness="0" UseAeroCaptionButtons="False"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF393844" />
+            <Setter Property="Foreground" Value="#FFDADADA" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF282631" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="#FF292731" />
+                                <Setter Property="Foreground" Value="#FFB9B9B9" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CustomButtonCloseStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF322F3C" />
+            <Setter Property="Foreground" Value="#FFDADADA" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FFC12418" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="#FF292731" />
+                                <Setter Property="Foreground" Value="#FFB9B9B9" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CustomBlueButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF3B3A46" />
+            <Setter Property="Foreground" Value="#FFDADADA" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF9CC0F9" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="#FF292731" />
+                                <Setter Property="Foreground" Value="#FFB9B9B9" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CustomTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#FFD6D6DA" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{x:Null}" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ScrollBarLineButtonStyle" TargetType="{x:Type RepeatButton}">
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+                        <Canvas Height="18">
+                            <Polygon Fill="{x:Null}" Points="3,15 15,15 9,3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="0" Visibility="Hidden"></Polygon>
+                        </Canvas>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ScrollBarLineButtonBottomStyle" TargetType="{x:Type RepeatButton}">
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+                        <Canvas Height="18">
+                            <Polygon Fill="{x:Null}" Points="3,3 9,15 15,3" Visibility="Hidden"></Polygon>
+                        </Canvas>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ScrollBarPageButtonStyle" TargetType="{x:Type RepeatButton}">
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+                        <Border BorderBrush="Transparent" Margin="0,0,17,0" RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ScrollBarThumbStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="Margin" Value="1,0,1,0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Rectangle Fill="#FFD6D6DA" Margin="3,-1, 4,-1" RadiusX="5" RadiusY="4"></Rectangle>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <ControlTemplate x:Key="VerticalScrollBar" TargetType="{x:Type ScrollBar}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition MaxHeight="18"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition MaxHeight="18"/>
+                </Grid.RowDefinitions>
+
+                <RepeatButton
+                          Style="{StaticResource ScrollBarLineButtonStyle}"
+                          Command="ScrollBar.LineUpCommand" Background="{x:Null}" Width="0" Height="0" Grid.ColumnSpan="1" Grid.RowSpan="1" />
+                <Track Name="PART_Track" Grid.Row="1" 
+                   IsDirectionReversed="True">
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton Command="ScrollBar.PageUpCommand" Style="{StaticResource ScrollBarPageButtonStyle}">
+                        </RepeatButton>
+                    </Track.DecreaseRepeatButton>
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource ScrollBarThumbStyle}">
+                        </Thumb>
+                    </Track.Thumb>
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton Command="ScrollBar.PageDownCommand" Style="{StaticResource ScrollBarPageButtonStyle}">
+                        </RepeatButton>
+                    </Track.IncreaseRepeatButton>
+                </Track>
+                <RepeatButton Grid.Row="3" Height="18"
+                          Style="{StaticResource ScrollBarLineButtonBottomStyle}"
+                          Command="ScrollBar.LineDownCommand">
+                </RepeatButton>
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="HorizontalScrollBar" TargetType="{x:Type ScrollBar}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MaxWidth="18"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition MaxWidth="18"/>
+                </Grid.ColumnDefinitions>
+
+                <RepeatButton Grid.Column="0" Width="18"
+                      Style="{StaticResource ScrollBarLineButtonStyle}"
+                      Command="ScrollBar.LineLeftCommand">
+                </RepeatButton>
+                <Track Name="PART_Track" Grid.Column="1">
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton Command="ScrollBar.PageLeftCommand" Style="{StaticResource ScrollBarPageButtonStyle}">
+                        </RepeatButton>
+                    </Track.DecreaseRepeatButton>
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource ScrollBarThumbStyle}">
+                        </Thumb>
+                    </Track.Thumb>
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton Command="ScrollBar.PageRightCommand" Style="{StaticResource ScrollBarPageButtonStyle}">
+                        </RepeatButton>
+                    </Track.IncreaseRepeatButton>
+                </Track>
+                <RepeatButton Grid.Column="2" Width="18"
+                      Style="{StaticResource ScrollBarLineButtonBottomStyle}"
+                      Command="ScrollBar.LineRightCommand">
+                </RepeatButton>
+            </Grid>
+        </ControlTemplate>
+
+        <Style TargetType="{x:Type ScrollBar}">
+            <Setter Property="Template" Value="{StaticResource VerticalScrollBar}"/>
+        </Style>
+        <Style TargetType="{x:Type ScrollBar}" x:Key="HorizontalScrollBarStyle">
+            <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}"/>
+        </Style>
+    </Window.Resources>
+
+    <Window.Style>
+        <StaticResource ResourceKey="CustomWindowStyle"/>
+    </Window.Style>
+
+    <Grid>
+        <Grid x:Name="TitleBar" Background="#FF3B3A46" Height="30" VerticalAlignment="Top" PreviewMouseLeftButtonDown="TitleBar_PreviewMouseLeftButtonDown" MouseMove="TitleBar_MouseMove">
+            <Button x:Name="CloseButton" Style="{StaticResource CustomButtonCloseStyle}" Width="30" Height="30" HorizontalAlignment="Left" Click="Close_Click" Background="Transparent" Margin="1890,0,0,0" BorderBrush="{x:Null}" Cursor="Hand">
+                <Image Source="/Images/close.png" Width="16" Height="16"/>
+            </Button>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="204" TextAlignment="Center" FontSize="14" Foreground="#FF151515"><Run Text="Народный Фронт v"/><Run Language="ru-ru" Text="3"/><Run Text=".0"/><Run Language="ru-ru" Text="0"/></TextBlock>
+        </Grid>
+
+        <Canvas Margin="0,0,735,0" Height="1002" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1144" Background="#FF3B3A46">
+            <Canvas.Clip>
+                <RectangleGeometry RadiusX="10" RadiusY="15" Rect="0,0,1144,1002"/>
+            </Canvas.Clip>
+            <Rectangle HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18" Fill="#FF3B3A46" Panel.ZIndex="1" Canvas.Left="1127" Canvas.Top="985"/>
+            <ScrollViewer x:Name="ScrollViewer"  Width="1144" Height="1002" FlowDirection="LeftToRight" CanContentScroll="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+                <Viewbox x:Name="Map" Height="1002" Width="1144" MouseDown="Map_MouseDown" Cursor="Pen" MouseWheel="Map_MouseWheel">
+                    <Image Height="1002" Source="Images/map.png" Stretch="Fill" Width="1144" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </Viewbox>
+            </ScrollViewer>
+        </Canvas>
+
+        <Button x:Name="AddMarker" Style="{StaticResource CustomButtonStyle}" Content="Добавить" Margin="1495,950,0,0" FontSize="30" Click="AddMarker_Click" PreviewKeyDown="AddMarker_KeyDown" Focusable="True" IsDefault="True" Height="70" VerticalAlignment="Top" HorizontalAlignment="Left" Width="387" Cursor="Hand"/>
+        <TextBox x:Name="X" Style="{StaticResource CustomTextBoxStyle}" Margin="1495,0,0,276" TextWrapping="NoWrap" Text="" FontSize="25" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" CharacterCasing="Normal" FontStretch="Normal" TextAlignment="Center" IsReadOnly="True" TextChanged="X_TextChanged" HorizontalAlignment="Left" Width="387" Height="45" VerticalAlignment="Bottom" Foreground="#FF292731"/>
+        <TextBox x:Name="Y" Style="{StaticResource CustomTextBoxStyle}" Margin="1495,0,0,177" TextWrapping="NoWrap" Text="" FontSize="25" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" CharacterCasing="Normal" FontStretch="Normal" TextAlignment="Center" IsReadOnly="True" Height="45" Foreground="#FF292731" HorizontalAlignment="Left" Width="387" VerticalAlignment="Bottom"/>
+        <TextBlock Margin="1495,0,0,960" TextWrapping="Wrap" Text="Добавить метку" FontSize="48" TextTrimming="None" FontWeight="Bold" Foreground="#FFD6D6DA" Height="81" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387"/>
+        <TextBlock Margin="1495,0,0,324" TextWrapping="Wrap" Text="X:" FontSize="30" Height="43" Foreground="#FFD6D6DA" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387"/>
+        <TextBlock Margin="1495,0,0,225" TextWrapping="Wrap" Text="Y:" FontSize="30" Height="43" Foreground="#FFD6D6DA" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387"/>
+        <Button x:Name="LoadExcel" Style="{StaticResource CustomButtonStyle}" Content="Загрузить excel" Margin="1495,0,0,885" FontSize="30" Click="LoadExcel_Click" Focusable="False" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Cursor="Hand"/>
+        <TextBox x:Name="PhotoNum" Style="{StaticResource CustomTextBoxStyle}" Margin="1495,0,0,772" TextWrapping="NoWrap" Text="" FontSize="25" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" CharacterCasing="Normal" FontStretch="Normal" TextAlignment="Center" IsReadOnly="True" Height="45" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Background="#FFD6D6DA" Foreground="#FF292731"/>
+        <TextBox x:Name="Name" Style="{StaticResource CustomTextBoxStyle}" Margin="1495,0,0,672" TextWrapping="NoWrap" Text="" FontSize="25" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" CharacterCasing="Normal" FontStretch="Normal" TextAlignment="Center" IsReadOnly="True" Height="45" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FF292731"/>
+        <TextBlock Margin="1495,0,0,818" TextWrapping="Wrap" FontSize="30" Height="43" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FFD6D6DA"><Run Language="ru-ru" Text="Фото "/><Run Language="ru-ru" Text="№"/><Run Text=":"/></TextBlock>
+        <TextBlock Margin="1495,0,0,720" TextWrapping="Wrap" FontSize="30" Height="43" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FFD6D6DA"><Run Language="ru-ru" Text="Название"/><Run Text=":"/></TextBlock>
+        <TextBox x:Name="Special" Style="{StaticResource CustomTextBoxStyle}" Margin="1495,0,0,573" TextWrapping="NoWrap" Text="" FontSize="25" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" CharacterCasing="Normal" FontStretch="Normal" TextAlignment="Center" IsReadOnly="True" Height="45" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FF292731"/>
+        <TextBox x:Name="Adress" Style="{StaticResource CustomTextBoxStyle}" Margin="1495,0,0,474" TextWrapping="NoWrap" Text="" FontSize="25" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" CharacterCasing="Normal" FontStretch="Normal" TextAlignment="Center" IsReadOnly="True" Height="45" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FF292731"/>
+        <TextBlock Margin="1495,0,0,621" TextWrapping="Wrap" FontSize="30" Height="43" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FFD6D6DA"><Run Text="Особые отметки"/><Run Language="ru-ru" Text=":"/></TextBlock>
+        <TextBlock Margin="1495,517,0,0" TextWrapping="Wrap" FontSize="30" HorizontalAlignment="Left" Width="387" Height="42" VerticalAlignment="Top" Foreground="#FFD6D6DA"><Run Language="ru-ru" Text="Адрес"/><Run Text=":"/></TextBlock>
+        <TextBox x:Name="Site" Style="{StaticResource CustomTextBoxStyle}" Margin="1495,0,0,375" TextWrapping="NoWrap" Text="" FontSize="25" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" CharacterCasing="Normal" FontStretch="Normal" TextAlignment="Center" IsReadOnly="True" Height="45" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FF292731"/>
+        <TextBlock Margin="1495,0,0,421" TextWrapping="Wrap" FontSize="30" Height="43" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="387" Foreground="#FFD6D6DA"><Run Language="ru-ru" Text="Сайт"/><Run Text=":"/></TextBlock>
+
+        <Rectangle HorizontalAlignment="Center" Width="1920" Fill="#FF5A5969" Opacity="0.5" Panel.ZIndex="-1" Height="1050" VerticalAlignment="Top" Margin="0,30,0,0"/>
+
+        <Button x:Name="ThisVersion" Style="{StaticResource CustomBlueButtonStyle}" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="ThisVersion_Click">
+            <Image Source="/Images/information.png"/>
+        </Button>
+        <Button x:Name="ChooseSite" Style="{StaticResource CustomBlueButtonStyle}" HorizontalAlignment="Left" Margin="41,0,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="ChooseSite_Click">
+            <Image Source="/Images/folder.png" Margin="1,0,0,0"/>
+        </Button>
+    </Grid>
+</Window>
